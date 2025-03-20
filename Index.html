@@ -5,12 +5,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="generator" content="https://primerastereo2025.netlify.app/" />
-<meta name="theme-color" content="#003399">
+<meta name="theme-color" content="#0066FF">
 <meta http-equiv="Content-Language" content="es-VE" />
 <title>PRIMERA STEREO</title>
 <meta name="description" content="PRIMERA STEREO, Radio Online, Miranda, Venezuela" />
 <meta name="keywords" content="Música Las 24 Horas, 24/7" />
 <meta name="URL" content="https://primerastereo2025.netlify.app/" />
+<meta name="language" content="es-VE">
 
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="Música Las 24 Horas, 24/7" />
@@ -78,14 +79,14 @@
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: radial-gradient(circle, #3901A4 20%, #23005C 100%);
+  background: radial-gradient(circle, #3901A4  20%, #23005C  100%);
 }
 
 .contact .php-email-form button[type="submit"] {
   background: #0066FF!important;
   border: 0;
   padding: 10px 35px;
-  color: #fff;
+  color: #23005C ;
   transition: 0.4s;
   border-radius: 50px;
 }
@@ -130,14 +131,14 @@
 #hora {
   font-size: 18px; /* Tamaño más grande para la hora */
 }
- 
+
  
   
   height: 45px;
   font-size: 25px;
   font-family: "Poppins", sans-serif;
   color: #FFFFFF!important;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #0066FF;
   backdrop-filter: blur(40px);
   border: 2px solid #FFFFFF!important;
   flex-direction: column;
@@ -210,14 +211,14 @@
   height: auto;
   padding: 10px;
   border-radius: 50px;
-  background-color: #FFFFFF!important;
+  background-color: #FFFF00!important;
   position: absolute;
   bottom: 70px;
   left: 25%;
   right: 25%;
   z-index: 0;
   font-size: 22px;
-  color: #FFFFFF!important;
+  color: #FFFF00!important;
 }
 .cars h1{
   margin-top: -10px;
@@ -285,14 +286,14 @@
 <ul>
 
 
-<li><a target="_black" href="https://www.facebook.com/PrimeraStereoRadio"><i class="bx bxl-facebook-circle"></i>
+<li><a target="_black" href="https://www.facebook.com/PrimeraStereoRadio"><i class="bx bxl-facebook-square"></i>
 <span>Facebook</span></a></li>
 <li><a target="_black" href="https://www.instagram.com/Primera.Stereo/"><i class="bx bxl-instagram-alt"></i>
 <span>Instagram</span></a></li>
 <li><a target="_black" href="https://www.twitter.com/Primera_Stereo"><i class="bx bxl-twitter"></i>
 <span>Twitter</span></a></li>
 <li><a target="_black" href="https://api.whatsapp.com/send?phone=+5804123637748&text=Hola%20estoy%20escuchando%20la%20radio" target="_blank">
-<i class="bx bxl-whatsapp"></i> Whatsapp</span></a></li>
+<i class="bx bxl-whatsapp-square"></i>Whatsapp</span></a></li>
 
 
 
@@ -306,10 +307,15 @@
 
 <div id="player"></div>
 
-<div id="hora-container">
+<div id="relogio">
+  
+  <div id="hora-container">
     <div class="hora-frase">Hora Actual:</div>
     <div id="hora">Cargando...</div>
   </div>
+</div>
+
+
 
 
 
@@ -368,7 +374,7 @@ hightlightcolor: "#023fba",
 fontname: "Unica One",
 googlefont: "Unica+One&display=swap", 
 fontratio: "0.6", 
-radioname: "PRIMERA STEREO", //nombre de radio
+radioname: "PRIMERA STEREO | Radio Online", //nombre de radio
 scroll: "true",
 autoplay: "true", 
 coverimage: "fondo01.jpg", //link o ruta de logo radio
@@ -381,7 +387,7 @@ color1: "#162fe4",
 color2: "#00ffea",
 color3: "#162fe4",
 color4: "#00ffea",
-visualizeropacity: "1.0",
+visualizeropacity: "3.0",
 usestreamcorsproxy: "false", //true o false
 corsproxy: "", 
 streamurl:"https://stream.zeno.fm/u6cbawcdkcxvv", 
@@ -415,6 +421,7 @@ debug: "false",
     setInterval(relogio, 1000);
     relogio(); // Llama al reloj inmediatamente para que cargue la hora al iniciar
 </script>
+
  
 <script src="bootstrap.bundle.min.js"></script>
 <script src="jquery.easing.min.js"></script>
