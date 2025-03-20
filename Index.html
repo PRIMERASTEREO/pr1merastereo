@@ -82,7 +82,7 @@
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #023fba!important;
+  background: #0066FF!important;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -90,7 +90,7 @@
   border-radius: 50px;
 }
 .contact .php-email-form button[type="submit"]:hover {
-  background: #023fba!important;;
+  background: #0066FF!important;;
 }
 
 .nav-menu > ul > li {
@@ -105,7 +105,31 @@
   right: 20px;
   border-radius: 50px;
   display: flex;
-  width: 185px;
+  width: 200px; /* Aumenta el ancho para dar más espacio */
+  height: auto; /* Permite que el contenido determine la altura */
+ #relogio {
+  font-size: 10px; /* Ajusta el tamaño de la fuente */
+  padding: 14px; /* Añade espacio interno */
+}
+
+
+
+#hora-container {
+  display: flex;
+  flex-direction: column; /* Coloca la frase y la hora en columnas (una encima de la otra) */
+  align-items: center; /* Centra y ajusta el contenido */
+  text-align: center;
+}
+
+.hora-frase {
+  font-size: 10px; /* Tamaño más pequeño para la frase "Hora Actual" */
+  color: #FFFFFF; /* Mantén el color actual */
+  margin-bottom: 4px; /* Espacio entre la frase y la hora */
+}
+
+#hora {
+  font-size: 18px; /* Tamaño más grande para la hora */
+}
  
  
   
@@ -134,7 +158,7 @@
   font-size: 15px;
   border-radius: 50px;
   border: 2px solid #fff;
-  background: #023fba!important;
+  background: #0066FF!important;
   height: 46px;
   width: 100%;
   overflow: hidden;
@@ -159,12 +183,12 @@
   .nav-menu a span {
     display: none;
     font-family: 'Poppins';
-    color: #FFFFFF!important;
+    color: #23005C!important;
   }
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #fff;
+  color: #003399;
   background: #023fba!important;
 }
 
@@ -213,14 +237,14 @@
   height: auto;
   padding: 0px;
   border-radius: 50px;
-  background-color: #FFFFFF!important;
+  background-color: #023fba!important;
   position: absolute;
   bottom: 120px;
   left: 1%;
   right: 1%;
   z-index: 0;
   font-size: 20px;
-  color: #FFFFFF!important;
+  color: #023fba!important;
   }
 
   .cars h1{
@@ -282,10 +306,10 @@
 
 <div id="player"></div>
 
-<div id="relogio">
-<div class="bx bx-stopwatch bx-tada"></div>
-<div id="hora"> Hora Actual</div>
-</div>
+<div id="hora-container">
+    <div class="hora-frase">Hora Actual:</div>
+    <div id="hora">Cargando...</div>
+  </div>
 
 
 
@@ -382,13 +406,15 @@ debug: "false",
 </script>
 
 <script>
-        function relogio() {
-            let elementoID = document.getElementById('hora');
-            let horalocal = new Date().toLocaleTimeString('es-VE');
-            elementoID.innerHTML = horalocal;
-        }
-        setInterval(relogio, 1000);
-    </script>
+    function relogio() {
+        let formatter = new Intl.DateTimeFormat('es-VE', { timeStyle: 'medium' });
+        let horalocal = formatter.format(new Date());
+        let elementoID = document.getElementById('hora');
+        elementoID.innerText = horalocal; // Solo actualiza el texto dentro del span "hora"
+    }
+    setInterval(relogio, 1000);
+    relogio(); // Llama al reloj inmediatamente para que cargue la hora al iniciar
+</script>
  
 <script src="bootstrap.bundle.min.js"></script>
 <script src="jquery.easing.min.js"></script>
