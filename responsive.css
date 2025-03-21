@@ -1,0 +1,10 @@
+/* Estilos responsivos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Ajusta el tamaño del texto para mejor lectura en móviles */
+    }
+    .count-particles, #stats {
+        width: 100%; /* Asegura que estos elementos no se desborden en pantallas pequeñas */
+    }
+    /* Aquí puedes incluir más ajustes específicos */
+}
