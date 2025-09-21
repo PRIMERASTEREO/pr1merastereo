@@ -380,51 +380,49 @@
 </div>
 </div>
 
-<script src="lunaradio-animado.js"></script>
+<script src="lunaradio.js"></script>
 <script>
 $("#player").lunaradio({
-token: "",
-userinterface: "big", //big o small
-backgroundcolor: "#023fba",
-fontcolor: "#FFFFFF",
-hightlightcolor: "#023fba", 
-fontname: "Unica One",
-googlefont: "Unica+One&display=swap", 
-fontratio: "0.6", 
-radioname: "PRIMERA STEREO RADIO ONLINE", //nombre de radio
-scroll: "true",
-autoplay: "true", 
-coverimage: "NewLogo-Primera.png", //link o ruta de logo radio
-onlycoverimage: "false", //true para mostrar solo logo radio
-coverstyle: "animated",//circle o square o hits1
-usevisualizer: "real", 
-visualizertype: "7", 
-multicolorvisualizer: "true",
-color1: "#162fe4",
-color2: "#00ffea",
-color3: "#162fe4",
-color4: "#00ffea",
-visualizeropacity: "3.0",
-usestreamcorsproxy: "false", //true o false
-corsproxy: "", 
-streamurl:"https://stream.zeno.fm/u6cbawcdkcxvv", 
-streamtype: "zeno", //centova, icecast2, radiozeno, radionomy, radiojar, radioco
-radiozeno: "u6cbawcdkcxvv",
-icecastmountpoint: "u6cbawcdkcxvv",
-idzeno: "u6cbawcdkcxvv",
-shoutcastpath: "",
-streamid: "1", 
-streamsuffix: "", 
-radionomyid: "", 
-radionomyapikey: "",
-radiojarid: "",  
-radiocoid: "",
 itunestoken: "1000lIPN",
-metadatatechnic: "/fallback", //fallback (usar para zeno)
-metadatainterval: "26000", 
+streamurl: "http://usa7.fastcast4u.com:5388", 
+radioname: "ESTÁS ESCUCHANDO POR PRIMERA STEREO ONLINE ", 
+coverimage: "https://primerastereofmradio.netlify.app/images/Nuevo%20Logo.png", 
+onlycoverimage: false, 
+userinterface: "big", 
+backgroundcolor: "", 
+fontcolor: "#ffffff", 
+hightlightcolor: "", 
+fontname: "", 
+googlefont: "", 
+fontratio: "0.4", 
+scroll: "true",
+scrollradioname: "left",
+scrolltitle: "left",
+scrollradionamespeed: "0.25",
+scrolltitlespeed: "0.25", 
+coverstyle: "animated", 
+usevisualizer: "real", 
+visualizertype: "7",
+multicolorvisualizer: "true",
+color1: "#0291f7",
+color2: "#ffff00",
+color3: "#FF1F6F",
+color4: "#FF7F00",
+visualizeropacity: "5.0",
+visualizerghost: "5.0",
+visualizerblur: "5",
+visualizerghostblur: "5",
+metadatatechnic: "corsproxy",
+ownmetadataurl: "", 
+streamtype: "shoutcast2", 
+shoutcastpath: "/stream", 
+shoutcastid: "1", 
+metadatainterval: "5000",
+volume: "25", 
+autoplay: "true",
 displayliveicon: "true",
-volume: "100",
-debug: "false",
+usestreamcorsproxy: "true",
+corsproxy: "",
 });
 </script>
 
@@ -462,5 +460,6 @@ debug: "false",
 </body>
 
 </html>
+
 
 
